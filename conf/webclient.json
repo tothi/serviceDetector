@@ -1,0 +1,38 @@
+{
+  "products": [
+    {
+      "name": "WebClient",
+      "services": [
+        {
+          "name": "WebClient",
+          "description": "WebClient Service"
+        }
+      ],
+      "pipes": [
+        {
+          "name": "DAV RPC SERVICE",
+          "processes": [
+            "svchost.exe"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Spooler",
+      "services": [
+        {
+          "name": "Spooler",
+          "description": "Print Spooler"
+        }
+      ],
+      "pipes": [
+        {
+          "name": "spoolss",
+          "processes": [
+            ""
+          ]
+        }
+      ]
+    }
+  ]
+}

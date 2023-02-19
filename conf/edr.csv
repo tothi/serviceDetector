@@ -1,0 +1,28 @@
+Bitdefender;service;bdredline_agent;Bitdefender Agent RedLine Service
+Bitdefender;service;BDAuxSrv;Bitdefender Auxiliary Service
+Bitdefender;service;UPDATESRV;Bitdefender Desktop Update Service
+Bitdefender;service;VSSERV;Bitdefender Virus Shield
+Bitdefender;service;bdredline;Bitdefender RedLine Service
+Bitdefender;pipe;local\msgbus\antitracker.low\*;bdagent.exe
+Bitdefender;pipe;local\msgbus\aspam.actions.low\*;bdagent.exe
+Bitdefender;pipe;local\msgbus\bd.process.broker.pipe;bdagent.exe,bdservicehost.exe,updatesrv.exe
+Bitdefender;pipe;local\msgbus\bdagent*;bdagent.exe
+Bitdefender;pipe;local\msgbus\bdauxsrv;bdagent.exe,bdntwrk.exe
+Windows Defender;service;WinDefend;Windows Defender Antivirus Service
+Windows Defender;service;Sense;Windows Defender Advanced Threat Protection Service
+Windows Defender;service;WdNisSvc;Windows Defender Antivirus Network Inspection Service
+ESET;service;ekm;ESET
+ESET;service;epfw;ESET
+ESET;service;epfwlwf;ESET
+ESET;service;epfwwfp;ESET
+ESET;service;EraAgentSvc;ESET
+ESET;pipe;nod_scriptmon_pipe
+CrowdStrike;service;CSFalconService;CrowdStrike Falcon Sensor Service
+CrowdStrike;pipe;CrowdStrike\{*;CSFalconContainer.exe,CSFalconService.exe
+SentinelOne;service;SentinelAgent;SentinelOne Endpoint Protection Agent
+SentinelOne;service;SentinelStaticEngine;Manage static engines for SentinelOne Endpoint Protection
+SentinelOne;service;LogProcessorService;Manage logs for SentinelOne Endpoint Protection
+SentinelOne;pipe;SentinelAgentWorkerCert.*;
+SentinelOne;pipe;DFIScanner.Etw.*;SentinelStaticEngine.exe
+SentinelOne;pipe;DFIScanner.Inline.*;SentinelAgent.exe
+Carbon Black App Control;service;Parity;Carbon Black App Control Agent

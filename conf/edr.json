@@ -1,0 +1,180 @@
+{
+  "products": [
+    {
+      "name": "Bitdefender",
+      "services": [
+        {
+          "name": "bdredline_agent",
+          "description": "Bitdefender Agent RedLine Service"
+        },
+        {
+          "name": "BDAuxSrv",
+          "description": "Bitdefender Auxiliary Service"
+        },
+        {
+          "name": "UPDATESRV",
+          "description": "Bitdefender Desktop Update Service"
+        },
+        {
+          "name": "VSSERV",
+          "description": "Bitdefender Virus Shield"
+        },
+        {
+          "name": "bdredline",
+          "description": "Bitdefender RedLine Service"
+        }
+      ],
+      "pipes": [
+        {
+          "name": "local\\msgbus\\antitracker.low\\*",
+          "processes": [
+            "bdagent.exe"
+          ]
+        },
+        {
+          "name": "local\\msgbus\\aspam.actions.low\\*",
+          "processes": [
+            "bdagent.exe"
+          ]
+        },
+        {
+          "name": "local\\msgbus\\bd.process.broker.pipe",
+          "processes": [
+            "bdagent.exe",
+            "bdservicehost.exe",
+            "updatesrv.exe"
+          ]
+        },
+        {
+          "name": "local\\msgbus\\bdagent*",
+          "processes": [
+            "bdagent.exe"
+          ]
+        },
+        {
+          "name": "local\\msgbus\\bdauxsrv",
+          "processes": [
+            "bdagent.exe",
+            "bdntwrk.exe"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Windows Defender",
+      "services": [
+        {
+          "name": "WinDefend",
+          "description": "Windows Defender Antivirus Service"
+        },
+        {
+          "name": "Sense",
+          "description": "Windows Defender Advanced Threat Protection Service"
+        },
+        {
+          "name": "WdNisSvc",
+          "description": "Windows Defender Antivirus Network Inspection Service"
+        }
+      ],
+      "pipes": []
+    },
+    {
+      "name": "ESET",
+      "services": [
+        {
+          "name": "ekm",
+          "description": "ESET"
+        },
+        {
+          "name": "epfw",
+          "description": "ESET"
+        },
+        {
+          "name": "epfwlwf",
+          "description": "ESET"
+        },
+        {
+          "name": "epfwwfp",
+          "description": "ESET"
+        },
+        {
+          "name": "EraAgentSvc",
+          "description": "ESET"
+        }
+      ],
+      "pipes": [
+        {
+          "name": "nod_scriptmon_pipe",
+          "processes": [
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CrowdStrike",
+      "services": [
+        {
+          "name": "CSFalconService",
+          "description": "CrowdStrike Falcon Sensor Service"
+        }
+      ],
+      "pipes": [
+        {
+          "name": "CrowdStrike\\{*",
+          "processes": [
+            "CSFalconContainer.exe",
+            "CSFalconService.exe"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SentinelOne",
+      "services": [
+        {
+          "name": "SentinelAgent",
+          "description": "SentinelOne Endpoint Protection Agent"
+        },
+        {
+          "name": "SentinelStaticEngine",
+          "description": "Manage static engines for SentinelOne Endpoint Protection"
+        },
+        {
+          "name": "LogProcessorService",
+          "description": "Manage logs for SentinelOne Endpoint Protection"
+        }
+      ],
+      "pipes": [
+        {
+          "name": "SentinelAgentWorkerCert.*",
+          "processes": [
+            ""
+          ]
+        },
+        {
+          "name": "DFIScanner.Etw.*",
+          "processes": [
+            "SentinelStaticEngine.exe"
+          ]
+        },
+        {
+          "name": "DFIScanner.Inline.*",
+          "processes": [
+            "SentinelAgent.exe"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Carbon Black App Control",
+      "services": [
+        {
+          "name": "Parity",
+          "description": "Carbon Black App Control Agent"
+        }
+      ],
+      "pipes": []
+    }
+  ]
+}

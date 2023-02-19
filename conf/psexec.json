@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "name": "Impacket PsExec",
+      "services": [],
+      "pipes": [
+        {
+          "name": "RemCom_*",
+          "processes": [
+            ""
+          ]
+        }
+      ]
+    }
+  ]
+}
