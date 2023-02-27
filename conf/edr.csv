@@ -26,3 +26,11 @@ SentinelOne;pipe;SentinelAgentWorkerCert.*;
 SentinelOne;pipe;DFIScanner.Etw.*;SentinelStaticEngine.exe
 SentinelOne;pipe;DFIScanner.Inline.*;SentinelAgent.exe
 Carbon Black App Control;service;Parity;Carbon Black App Control Agent
+Cybereason;pipe;CybereasonAPConsoleMinionHostIpc_*;minionhost.exe
+Cybereason;pipe;CybereasonAPServerProxyIpc_*;minionhost.exe
+Cybereason;service;CybereasonActiveProbe;Cybereason Active Probe
+Cybereason;service;CybereasonCRS;Cybereason Anti-Ransomware
+Cybereason;service;CybereasonBlocki;Cybereason Execution Prevention
+Symantec Endpoint Protection;service;SepMasterService;Symantec Endpoint Protection
+Symantec Endpoint Protection;service;SepScanService;Symantec Endpoint Protection Scan Services
+Symantec Endpoint Protection;service;SNAC;Symantec Network Access Control
