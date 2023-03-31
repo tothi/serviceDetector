@@ -224,6 +224,20 @@
         }
       ],
       "pipes": []
-    }
+    },
+	{
+      "name": "Carbon Black",
+      "services": [
+        {
+          "name": "CbDefense",
+          "description": "Carbon Black Cloud Sensor service"
+        },
+        {
+          "name": "CbDefenseWSC",
+          "description": "Carbon Black Cloud Sensor WSC service"
+        }
+      ],
+      "pipes": []
+    }  
   ]
 }
