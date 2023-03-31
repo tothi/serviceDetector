@@ -34,3 +34,5 @@ Cybereason;service;CybereasonBlocki;Cybereason Execution Prevention
 Symantec Endpoint Protection;service;SepMasterService;Symantec Endpoint Protection
 Symantec Endpoint Protection;service;SepScanService;Symantec Endpoint Protection Scan Services
 Symantec Endpoint Protection;service;SNAC;Symantec Network Access Control
+Carbon Black;service;CbDefense;Carbon Black Cloud Sensor service
+Carbon Black;service;CbDefenseWSC;Carbon Black Cloud Sensor WSC service
