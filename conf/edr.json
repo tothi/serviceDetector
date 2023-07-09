@@ -225,6 +225,34 @@
       ],
       "pipes": []
     },
+	{
+      "name": "Carbon Black",
+      "services": [
+        {
+          "name": "CbDefense",
+          "description": "Carbon Black Cloud Sensor service"
+        },
+        {
+          "name": "CbDefenseWSC",
+          "description": "Carbon Black Cloud Sensor WSC service"
+        }
+      ],
+      "pipes": []
+    },
+	{
+      "name": "SysMon",
+      "services": [
+        {
+          "name": "Sysmon64",
+          "description": "System Monitor service"
+        },
+		{
+          "name": "Sysmon",
+          "description": "System Monitor service"
+        }
+      ],
+      "pipes": []
+    },
     {
       "name": "Sophos Intercept X",
       "services": [
