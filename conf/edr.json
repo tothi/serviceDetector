@@ -294,6 +294,24 @@
         }
       ],
       "pipes": []
+    },
+    {
+      "name": "Webroot SecureAnywhere",
+      "services": [
+        {
+          "name": "WRCoreService",
+          "description": "Webroot SecureAnywhere Core Service"
+        },
+        {
+          "name": "WRSkyClient",
+          "description": "Webroot SecureAnywhere Core Service"
+        },
+        {
+          "name": "WRSVC",
+          "description": "Webroot SecureAnywhere Endpoint Protection"
+        }
+      ],
+      "pipes": []
     }
   ]
 }
