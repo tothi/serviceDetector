@@ -22,9 +22,41 @@
         {
           "name": "bdredline",
           "description": "Bitdefender RedLine Service"
+        },
+        {
+          "name": "EPRedline",
+          "description": "Bitdefender Endpoint Redline Service"
+        },
+        {
+          "name": "EPUpdateService",
+          "description": "Bitdefender Endpoint Update Service"
+        },
+        {
+          "name": "EPSecurityService",
+          "description": "Bitdefender Endpoint Security Service"
+        },
+        {
+          "name": "EPProtectedService",
+          "description": "Bitdefender Endpoint Protected Service"
+        },
+        {
+          "name": "EPIntegrationService",
+          "description": "Bitdefender Endpoint Integration Service"
         }
       ],
       "pipes": [
+        {
+          "name": "\\bdConnector\\ServiceControl\\EPSecurityService.exe",
+          "processes": [
+            "EPConsole.exe"
+          ]
+        },
+        {
+          "name": "etw_sensor_pipe_ppl",
+          "processes": [
+            "EPProtectedService.exe"
+          ]
+        },
         {
           "name": "local\\msgbus\\antitracker.low\\*",
           "processes": [
@@ -208,6 +240,96 @@
       ]
     },
     {
+      "name": "Kaspersky Security for Windows Server",
+      "services": [
+        {
+          "name": "kavfsslp",
+          "description": "Kaspersky Security Exploit Prevention Service"
+        },
+        {
+          "name": "KAVFS",
+          "description": "Kaspersky Security Service"
+        },
+        {
+          "name": "KAVFSGT",
+          "description": "Kaspersky Security Management Service"
+        },
+        {
+          "name": "klnagent",
+          "description": "Kaspersky Security Center"
+        }
+      ],
+      "pipes": [
+        {
+          "name": "Exploit_Blocker",
+          "processes": [
+            "kavfswh.exe"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trend Micro Endpoint Security",
+      "services": [
+        {
+          "name": "Trend Micro Endpoint Basecamp",
+          "description": "Trend Micro Endpoint Basecamp"
+        },
+        {
+          "name": "TMBMServer",
+          "description": "Trend Micro Unauthorized Change Prevention Service"
+        },
+        {
+          "name": "Trend Micro Web Service Communicator",
+          "description": "Trend Micro Web Service Communicator"
+        },
+        {
+          "name": "TMiACAgentSvc",
+          "description": "Trend Micro Application Control Service (Agent)"
+        },
+        {
+          "name": "CETASvc",
+          "description": "Trend Micro Cloud Endpoint Telemetry Service"
+        },
+        {
+          "name": "iVPAgent",
+          "description": "Trend Micro Vulnerability Protection Service (Agent)"
+        }
+      ],
+      "pipes": [
+        {
+          "name": "IPC_XBC_XBC_AGENT_PIPE_*",
+          "processes": [
+            "EndpointBasecamp.exe"
+          ]
+        },
+        {
+          "name": "iacagent_*",
+          "processes": [
+            "TMiACAgentSvc.exe"
+          ]
+        },
+        {
+          "name": "OIPC_LWCS_PIPE_*",
+          "processes": [
+            "TmListen.exe"
+          ]
+        },
+        {
+          "name": "Log_ServerNamePipe",
+          "processes": [
+            "LogServer.exe"
+          ]
+        },
+        {
+          "name": "OIPC_NTRTSCAN_PIPE_*",
+          "processes": [
+            "Ntrtscan.exe"
+          ]
+        }
+      ]
+    },
+    {
       "name": "Symantec Endpoint Protection",
       "services": [
         {
@@ -225,7 +347,7 @@
       ],
       "pipes": []
     },
-	{
+    {
       "name": "Carbon Black",
       "services": [
         {
@@ -239,14 +361,14 @@
       ],
       "pipes": []
     },
-	{
+    {
       "name": "SysMon",
       "services": [
         {
           "name": "Sysmon64",
           "description": "System Monitor service"
         },
-		{
+        {
           "name": "Sysmon",
           "description": "System Monitor service"
         }
@@ -291,6 +413,105 @@
         {
           "name": "Sophos System Protection Service",
           "description": "Sophos System Protection Service"
+        }
+      ],
+      "pipes": [
+        {
+          "name": "SophosUI",
+          "processes": [
+            ""
+          ]
+        },
+        {
+          "name": "SophosEventStore",
+          "processes": [
+            ""
+          ]
+        },
+        {
+          "name": "sophos_deviceencryption",
+          "processes": [
+            ""
+          ]
+        },
+        {
+          "name": "sophoslivequery_*",
+          "processes": [
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G DATA Security Client",
+      "services": [
+        {
+          "name": "AVKWCtl",
+          "description": "Anti-virus Kit Window Control"
+        },
+        {
+          "name": "AVKProxy",
+          "description": "G Data AntiVirus Proxy Service"
+        },
+        {
+          "name": "GDScan",
+          "description": "GDSG Data AntiVirus Scan Service"
+        }
+      ],
+      "pipes": [
+        {
+          "name": "exploitProtectionIPC",
+          "processes": [
+            "AVKWCtlx64.exe"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Panda Adaptive Defense 360",
+      "services": [
+        {
+          "name": "PandaAetherAgent",
+          "description": "Panda Endpoint Agent"
+        },
+        {
+          "name": "PSUAService",
+          "description": "Panda Product Service"
+        },
+        {
+          "name": "NanoServiceMain",
+          "description": "Panda Cloud Antivirus Service"
+        }
+      ],
+      "pipes": [
+        {
+          "name": "NNS_API_IPC_SRV_ENDPOINT",
+          "processes": [
+            "PSANHost.exe"
+          ]
+        },
+        {
+          "name": "PSANMSrvcPpal",
+          "processes": [
+            "PSUAService.exe"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Webroot SecureAnywhere",
+      "services": [
+        {
+          "name": "WRCoreService",
+          "description": "Webroot SecureAnywhere Core Service"
+        },
+        {
+          "name": "WRSkyClient",
+          "description": "Webroot SecureAnywhere Core Service"
+        },
+        {
+          "name": "WRSVC",
+          "description": "Webroot SecureAnywhere Endpoint Protection"
         }
       ],
       "pipes": []
